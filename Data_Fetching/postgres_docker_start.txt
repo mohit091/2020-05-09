@@ -1,0 +1,14 @@
+1.docker pull postgres:latest ## Pull Image for postgres
+2.mkdir ${HOME}/postgres-data/ ##create a local folder and mount it as a data volume for our running container
+3.docker run -d \
+	--name dev-postgres \
+	-e POSTGRES_PASSWORD=Pass2020! \
+	-v ${HOME}/postgres-data/:/var/lib/postgresql/data \
+        -p 5432:5432 \
+        postgres    
+
+This will run the image
+
+4. docker ps ## check that the container is running
+5.docker exec -it dev-postgres bash ## To get inside container's bash console
+6.psql -h localhost -U postgres ## connect to postgres

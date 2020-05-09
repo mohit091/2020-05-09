@@ -1,4 +1,4 @@
-select * from (
+select id,event_name,people_count from (
 select *,count(id) over (partition by event_group) as no_of_consecutive_events
 from
 (

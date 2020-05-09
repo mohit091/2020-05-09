@@ -31,4 +31,3 @@ INSERT INTO events(
 INSERT INTO events(
 	id, event_name, people_count)
 	VALUES (11, 'xyb1271', 70);
-i
